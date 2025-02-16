@@ -20,66 +20,86 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+// import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 import classes from './HeaderMegaMenu.module.css';
 
 //  mandates toggle menudata
 const mandatesData = [
   {
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
+    title: 'Mandates',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
+    title: 'RFPs',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
+    title: 'Manager Mandate Activity',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
+    title: 'Mandate Documents',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
 ];
 
 //  firms toggle menudata
 const firmsData = [
   {
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
+    title: 'Plans',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
+    title: 'Consultants',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
+    title: 'RIAs',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
+    title: 'Family Offices',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
+  },
+  {
+    title: 'Fund of Funds',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
+  },
+  {
+    title: 'Managers',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
 ];
 
 //  firms toggle menudata
 const contactsData = [
   {
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
+    title: 'Plan Contacts',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
+    title: 'Consultant Contacts',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
+    title: 'RIA Contacts',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
   },
   {
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
+    title: 'Fund of Funds Contacts',
+    description: 'Quis nunc lorem non tortor mattis velit. Erat felis lectus elit massa. Quam eu.',
+  },
+  {
+    title: 'Family Office Contacts',
+    description: '',
+  },
+  {
+    title: 'Manager Contacts',
+    description: '',
+  },
+  {
+    title: 'People Moves',
+    description: '',
   },
 ];
 
@@ -136,7 +156,7 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={120}>
+    <Box pb={20} mt="sm">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Image src="/finsearch-logo.png" alt="logo" width={100} height={40} />
@@ -245,7 +265,7 @@ export function HeaderMegaMenu() {
           <Group visibleFrom="sm">
             <Button variant="default">Log in</Button>
             <Button>Sign up</Button>
-            <ColorSchemeToggle />
+            {/* <ColorSchemeToggle /> */}
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />

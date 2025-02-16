@@ -1,8 +1,16 @@
 import '@mantine/core/styles.css';
+import './globals.css';
 
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import {
+  ColorSchemeScript,
+  Container,
+  Flex,
+  mantineHtmlProps,
+  MantineProvider,
+} from '@mantine/core';
 import { HeaderMegaMenu } from '@/components/Header/HeaderMegaMenu';
-import { theme } from '../theme';
+
+// import { theme } from '../theme';
 
 export const metadata = {
   title: 'Fin Seacrh',
@@ -16,11 +24,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider theme={theme}>
-          <div>
-            <HeaderMegaMenu />
-            <main>{children}</main>
-          </div>
+        <MantineProvider>
+          <Flex bg="#f5f5f5">
+            <Container size="xl">
+              <HeaderMegaMenu />
+              <main>{children}</main>
+            </Container>
+          </Flex>
         </MantineProvider>
       </body>
     </html>
