@@ -11,7 +11,7 @@ export interface TabContent {
 
 export interface Tab {
   label: string;
-  type: TabType;
+  type: string;
   content: TabContent[];
 }
 

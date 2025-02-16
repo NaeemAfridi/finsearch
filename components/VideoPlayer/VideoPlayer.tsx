@@ -34,7 +34,7 @@ export default function VideoPlayer({
       const handleVideoEnd = () => {
         setIsPlaying(false);
         setCurrentTime(0);
-        if (video) video.currentTime = 0;
+        if (video){video.currentTime = 0;} 
       };
 
       // Add event listeners
@@ -65,7 +65,7 @@ export default function VideoPlayer({
   };
 
   const formatTime = (time: number) => {
-    if (!time || isNaN(time)) return '0:00';
+    if (!time || isNaN(time)) {return '0:00'};
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
@@ -93,7 +93,6 @@ export default function VideoPlayer({
           src={src}
           poster={poster}
         >
-          {captionsSrc && (
             <track
               kind="captions"
               src={captionsSrc}
@@ -101,7 +100,6 @@ export default function VideoPlayer({
               label={captionsLang === 'en' ? 'English' : captionsLang}
               default
             />
-          )}
           Your browser does not support the video tag.
         </video>
 

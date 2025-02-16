@@ -57,7 +57,7 @@ export default function TopFirms() {
                   <Select
                     data={['$50 Billion+', '$100 Billion+', '$1 Trillion+']}
                     value={selectedFilter}
-                    onChange={setSelectedFilter}
+                    onChange={(value) => setSelectedFilter(value ?? '')}
                     size="xs"
                     w={130}
                   />
